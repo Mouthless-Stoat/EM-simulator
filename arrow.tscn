@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b0p56ckph20nd"]
+
+[ext_resource type="Script" uid="uid://4giq3j25oovk" path="res://arrow.gd" id="2_acd0x"]
+
+[node name="Arrow" type="Line2D" unique_id=716385807]
+points = PackedVector2Array(0, 0, 0, 0)
+script = ExtResource("2_acd0x")
