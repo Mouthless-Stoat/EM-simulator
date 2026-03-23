@@ -1,18 +1,31 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774211827
-arrow.gd::GDScript::2048378526496365308::1774202844::0::1::::<>Line2D<><>0<>0<><>::
-arrow.tscn::PackedScene::4173984431535573705::1774158967::0::1::::<><><>0<>0<><>::uid://4giq3j25oovk::::res://arrow.gd
-forward-solid.svg::CompressedTexture2D::5193980186741119032::1774199999::1774200014::1::::<><><>0<>0<>0ebde7a8cfdefa557b0ce41b22c44632<>res://.godot/imported/forward-solid.svg-0abc0b482dc05dce49127f02b1b5b177.ctex::
-Global.gd::GDScript::8761602393370158460::1774199335::0::1::::<>Node<><>0<>0<><>::
+::res://::1774243218
+export_presets.cfg::TextFile::-1::1774212190::0::1::::<><><>0<>0<><>::
+Global.gd::GDScript::8761602393370158460::1774240274::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D::4358412274062874798::1774111902::1774111907::1::::<><><>0<>0<>100dd3e4e114fe5c75658287b68d76a2<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-Main.tscn::PackedScene::4386234527898939758::1774202035::0::1::::<><><>0<>0<><>::uid://casuolcued1vw::::res://settings.gd<>uid://b8m78vgpf7r5q::::res://toggle_friend.gd<>uid://b58jjutat4nc3::::res://silder.gd<>uid://c4s4nldv2hc16::::res://toggle.gd<>uid://efibckqpguqm::::res://play-solid.svg<>uid://cgaadhva5ouvo::::res://forward-solid.svg<>uid://cfflcj74id41t::::res://pause-solid.svg
-main_theme.tres::Theme::5996106868348661645::1774191123::0::1::::<><><>0<>0<><>::
-particle.gd::GDScript::1414982436382199545::1774199678::0::1::::<>Sprite2D<><>0<>0<><>::
-particle.tscn::PackedScene::1529286424887953313::1774203569::0::1::::<><><>0<>0<><>::uid://b3diob4s87m03::::res://icon.svg<>uid://ufos3oinh7sn::::res://particle.gd<>uid://cb02k6xrj5m4m::::res://trail.gd<>uid://b0p56ckph20nd::::res://arrow.tscn
-pause-solid.svg::CompressedTexture2D::5134779456327266739::1774198552::1774198581::1::::<><><>0<>0<>01656ff1d79ac56945c948c0b84b3bb4<>res://.godot/imported/pause-solid.svg-9c96eecf90181e666b83bd8d9e74ec5c.ctex::
-play-solid.svg::CompressedTexture2D::291564906300480796::1774199786::1774199825::1::::<><><>0<>0<>c405c96715174e0e22cd3f9fc8bab8fa<>res://.godot/imported/play-solid.svg-1fafd5547d78ffd4db87532c3393a39a.ctex::
-settings.gd::GDScript::4811240089689938848::1774200540::0::1::::<>Control<><>0<>0<><>::
-silder.gd::GDScript::4560774063642919532::1774146688::0::1::::<>HSlider<><>0<>0<><>::
-toggle.gd::GDScript::6847261223954976483::1774199870::0::1::::<>Button<><>0<>0<><>::
-toggle_friend.gd::GDScript::4729428044712946432::1774121784::0::1::::<>Button<><>0<>0<><>::
+main.gd::GDScript::4811240089689938848::1774242869::0::1::::<>Control<><>0<>0<><>::
+Main.tscn::PackedScene::4386234527898939758::1774243218::0::1::::<><><>0<>0<><>::uid://casuolcued1vw::::res://main.gd<>uid://b8m78vgpf7r5q::::res://script/toggle_friend.gd<>uid://b58jjutat4nc3::::res://script/silder.gd<>uid://c4s4nldv2hc16::::res://script/pause.gd<>uid://efibckqpguqm::::res://asset/play-solid.svg<>uid://cgaadhva5ouvo::::res://asset/forward-solid.svg<>uid://cfflcj74id41t::::res://asset/pause-solid.svg<>uid://b3diob4s87m03::::res://icon.svg<>uid://u706vbwkahrn::::res://script/launcher.gd
+main_theme.tres::Theme::5996106868348661645::1774238906::0::1::::<><><>0<>0<><>::
+::res://asset/::1774243280
+circle-solid.svg::CompressedTexture2D::6182579654385576862::1774241763::1774242074::1::::<><><>0<>0<>b1a48a0b2f8de579013f1ccc26199aed<>res://.godot/imported/circle-solid.svg-f3b3e8a7076d724da0416accb902273b.ctex::
+crosshairs-solid.svg::CompressedTexture2D::1027662479122288908::1774243275::1774243298::1::::<><><>0<>0<>3be4c4c4b2b5e1c39a03897b06b1a166<>res://.godot/imported/crosshairs-solid.svg-ba8185be68f9f5fc649c03300f5bbe5a.ctex::
+forward-solid.svg::CompressedTexture2D::5193980186741119032::1774199999::1774243217::1::::<><><>0<>0<>e497888dd5f824b944ecd04212339ab6<>res://.godot/imported/forward-solid.svg-db372d4ade389eef1baeb60c088024c2.ctex::
+pause-solid.svg::CompressedTexture2D::5134779456327266739::1774198552::1774243207::1::::<><><>0<>0<>d997ced6fe49cc9e2330a42a914fa2e0<>res://.godot/imported/pause-solid.svg-06cb0a3aa2d94084ecfb487f6b68cab6.ctex::
+play-solid.svg::CompressedTexture2D::291564906300480796::1774199786::1774243207::1::::<><><>0<>0<>e01064fc5f4d5f75a1976cfb600b4ed1<>res://.godot/imported/play-solid.svg-83bacc40415b6395685a14c69538c333.ctex::
+::res://Export/::1774212940
+EM Simulator.apple-touch-icon.png::CompressedTexture2D::1287602739057452526::1774212190::1774212940::1::::<><><>0<>0<>79eace1241b76091599a464d5f3bf6c7<>res://.godot/imported/EM Simulator.apple-touch-icon.png-f7f8cf75aea5975cb1467095c01391d3.ctex::
+EM Simulator.icon.png::CompressedTexture2D::5360023194468983122::1774212190::1774212940::1::::<><><>0<>0<>49002723186afaec8a93e065a8d20c5b<>res://.godot/imported/EM Simulator.icon.png-d8036c962da2acbe0c8fca16b9802299.ctex::
+EM Simulator.png::CompressedTexture2D::360968838949222827::1774212190::1774212940::1::::<><><>0<>0<>1a865ae6164f0a9c875717af98e64357<>res://.godot/imported/EM Simulator.png-e956d333a33f1afbdd8a7035bc09dd00.ctex::
+::res://packed/::1774241467
+::res://packed/arrow/::1774242259
+arrow.gd::GDScript::2048378526496365308::1774242259::0::1::::<>Line2D<><>0<>0<><>::
+arrow.tscn::PackedScene::4173984431535573705::1774241456::0::1::::<><><>0<>0<><>::uid://4giq3j25oovk::::res://packed/arrow/arrow.gd
+::res://packed/particle/::1774242803
+particle.gd::GDScript::1414982436382199545::1774242624::0::1::::<>Sprite2D<><>0<>0<><>::
+particle.tscn::PackedScene::1529286424887953313::1774242803::0::1::::<><><>0<>0<><>::uid://cuc5gijccpi4m::::res://asset/circle-solid.svg<>uid://ufos3oinh7sn::::res://packed/particle/particle.gd<>uid://cb02k6xrj5m4m::::res://script/trail.gd<>uid://b0p56ckph20nd::::res://packed/arrow/arrow.tscn
+::res://script/::1774241555
+launcher.gd::GDScript::1471411350868882699::1774239861::0::1::::<>Sprite2D<><>0<>0<><>::
+pause.gd::GDScript::6847261223954976483::1774241530::0::1::::<>Button<><>0<>0<><>::
+silder.gd::GDScript::4560774063642919532::1774240492::0::1::::<>HSlider<><>0<>0<><>::
+toggle_friend.gd::GDScript::4729428044712946432::1774241555::0::1::::<>Button<><>0<>0<><>::
 trail.gd::GDScript::4896298536159451638::1774136047::0::1::::<>Line2D<><>0<>0<><>::

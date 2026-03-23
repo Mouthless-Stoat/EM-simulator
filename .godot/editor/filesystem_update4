@@ -1,0 +1,15 @@
+res://particle.tscn
+res://main_theme.tres
+res://Main.tscn
+res://settings.gd
+res://launcher.gd
+res://Global.gd
+res://silder.gd
+res://particle.gd
+res://packed/particle.tscn
+res://main.gd
+res://script/toggle.gd
+res://script/toggle_friend.gd
+res://packed/particle/particle.tscn
+res://packed/particle/particle.gd
+res://packed/arrow/arrow.gd

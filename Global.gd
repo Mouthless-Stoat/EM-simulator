@@ -9,4 +9,4 @@ var HAVE_E := 0
 var HAVE_B := 0
 
 var q = 0.02
-var me = 5
+var me = 10

@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://b3qyv271x8y0e"]
 
-[ext_resource type="Script" uid="uid://casuolcued1vw" path="res://settings.gd" id="1_cm0pq"]
-[ext_resource type="Script" uid="uid://b8m78vgpf7r5q" path="res://toggle_friend.gd" id="1_glv2v"]
-[ext_resource type="Script" uid="uid://b58jjutat4nc3" path="res://silder.gd" id="3_fos0i"]
-[ext_resource type="Script" uid="uid://c4s4nldv2hc16" path="res://toggle.gd" id="5_fos0i"]
-[ext_resource type="Texture2D" uid="uid://efibckqpguqm" path="res://play-solid.svg" id="6_lgr22"]
-[ext_resource type="Texture2D" uid="uid://cgaadhva5ouvo" path="res://forward-solid.svg" id="7_lgr22"]
-[ext_resource type="Texture2D" uid="uid://cfflcj74id41t" path="res://pause-solid.svg" id="7_trn2v"]
+[ext_resource type="Script" uid="uid://casuolcued1vw" path="res://main.gd" id="1_cm0pq"]
+[ext_resource type="Script" uid="uid://b8m78vgpf7r5q" path="res://script/toggle_friend.gd" id="1_glv2v"]
+[ext_resource type="Script" uid="uid://b58jjutat4nc3" path="res://script/silder.gd" id="3_fos0i"]
+[ext_resource type="Script" uid="uid://c4s4nldv2hc16" path="res://script/pause.gd" id="5_fos0i"]
+[ext_resource type="Texture2D" uid="uid://efibckqpguqm" path="res://asset/play-solid.svg" id="6_lgr22"]
+[ext_resource type="Texture2D" uid="uid://cgaadhva5ouvo" path="res://asset/forward-solid.svg" id="7_lgr22"]
+[ext_resource type="Texture2D" uid="uid://cfflcj74id41t" path="res://asset/pause-solid.svg" id="7_trn2v"]
+[ext_resource type="Texture2D" uid="uid://ov2plhxtk2lk" path="res://asset/crosshairs-solid.svg" id="8_03owx"]
+[ext_resource type="Script" uid="uid://u706vbwkahrn" path="res://script/launcher.gd" id="9_03owx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
 bg_color = Color(1, 0.41960785, 0.41960785, 1)
@@ -243,12 +245,15 @@ text = "Mass (relative)"
 [node name="Mass" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2" unique_id=89166786]
 layout_mode = 2
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/Mass" unique_id=883213583 node_paths=PackedStringArray("friend")]
+[node name="Mass" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/Mass" unique_id=883213583 node_paths=PackedStringArray("friend")]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-max_value = 10.0
+min_value = 1.0
+max_value = 5.0
 step = 0.1
+value = 1.0
 script = ExtResource("3_fos0i")
 friend = NodePath("../LineEdit")
 
@@ -266,17 +271,23 @@ text = "Initial Velocity"
 [node name="InitVel" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2" unique_id=1384470170]
 layout_mode = 2
 
-[node name="HSlider" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/InitVel" unique_id=680223832 node_paths=PackedStringArray("friend")]
+[node name="InitVel" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/InitVel" unique_id=680223832 node_paths=PackedStringArray("friend")]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+min_value = 1.0
+max_value = 50.0
 step = 0.1
+value = 10.0
 script = ExtResource("3_fos0i")
 friend = NodePath("../LineEdit")
 
 [node name="LineEdit" type="SpinBox" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/InitVel" unique_id=306961252]
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
+min_value = 1.0
+value = 1.0
 alignment = 2
 suffix = "m/s"
 
@@ -303,6 +314,7 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
+max_value = 1000.0
 step = 0.1
 value = 50.0
 script = ExtResource("3_fos0i")
@@ -426,6 +438,7 @@ theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel/MarginContainer" unique_id=1015455203]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -438,6 +451,14 @@ handle_input_locally = false
 size = Vector2i(902, 668)
 size_2d_override = Vector2i(960, 540)
 render_target_update_mode = 4
+
+[node name="Launcher" type="Sprite2D" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel/MarginContainer/SubViewportContainer/SubViewport" unique_id=1020782445]
+unique_name_in_owner = true
+modulate = Color(0, 0.84313726, 0.56078434, 1)
+position = Vector2(453.99997, 323)
+scale = Vector2(0.3125, 0.3125)
+texture = ExtResource("8_03owx")
+script = ExtResource("9_03owx")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2" unique_id=1602481572]
 layout_mode = 2

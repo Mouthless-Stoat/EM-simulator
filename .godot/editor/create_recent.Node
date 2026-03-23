@@ -1,3 +1,6 @@
+Sprite2D
+Label
+OptionButton
 Button
 TextureButton
 CenterContainer
@@ -6,9 +9,7 @@ CheckBox
 Container
 HBoxContainer
 Panel
-Label
 Line2D
 Node2D
 VBoxContainer
 VisibleOnScreenNotifier2D
-CollisionShape2D

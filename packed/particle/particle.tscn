@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://v12ehlfo6a8h"]
+
+[ext_resource type="Texture2D" uid="uid://cuc5gijccpi4m" path="res://asset/circle-solid.svg" id="1_ptq6v"]
+[ext_resource type="Script" uid="uid://ufos3oinh7sn" path="res://packed/particle/particle.gd" id="2_elln3"]
+[ext_resource type="Script" uid="uid://cb02k6xrj5m4m" path="res://script/trail.gd" id="3_q0rdw"]
+[ext_resource type="PackedScene" uid="uid://b0p56ckph20nd" path="res://packed/arrow/arrow.tscn" id="4_k8xpo"]
+
+[node name="Particle" type="Sprite2D" unique_id=1214726871]
+texture = ExtResource("1_ptq6v")
+script = ExtResource("2_elln3")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1044109323]
+top_level = true
+width = 2.0
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("3_q0rdw")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1296068635]
+
+[node name="EArrow" parent="." unique_id=395328472 instance=ExtResource("4_k8xpo")]
+width = 4.0
+default_color = Color(0.27450982, 0.654902, 0.99215686, 1)
+
+[node name="BArrow" parent="." unique_id=464488582 instance=ExtResource("4_k8xpo")]
+width = 4.0
+default_color = Color(1, 0.41960785, 0.41960785, 1)
+
+[node name="VArrow" parent="." unique_id=716385807 instance=ExtResource("4_k8xpo")]
+width = 4.0
+default_color = Color(0, 1, 0.6666667, 1)
+
+[node name="AArrow" parent="." unique_id=374593963 instance=ExtResource("4_k8xpo")]
+width = 4.0
+default_color = Color(1, 0.78431374, 0.39215687, 1)
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_exit"]
