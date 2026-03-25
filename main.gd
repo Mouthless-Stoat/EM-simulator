@@ -52,7 +52,6 @@ func clear_particle() -> void:
 		if "Particle" in child.name:
 			child.queue_free()
 
-
 func _change_B_direction() -> void:
 	if %BDir.text == "Into Page":
 		%BDir.text = "Out of Page"

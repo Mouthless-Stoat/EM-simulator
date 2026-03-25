@@ -9,7 +9,7 @@
 texture = ExtResource("1_ptq6v")
 script = ExtResource("2_elln3")
 
-[node name="Line2D" type="Line2D" parent="." unique_id=1044109323]
+[node name="Trail" type="Line2D" parent="." unique_id=1044109323]
 top_level = true
 width = 2.0
 joint_mode = 2

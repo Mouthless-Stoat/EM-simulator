@@ -15,8 +15,8 @@ var is_running = true
 func _ready() -> void:
 	vel = init_vel
 	self_modulate = Color.from_string("#ff6b6b", "#ffffff") if charge > 0 else Color.from_string("#6b8fff", "#ffffff")
-	$Line2D.default_color = Color.from_hsv(randf(), 0.75, 0.79, 1.0)
-	
+	$Trail.default_color = Color.from_hsv(randf(), 0.75, 0.79, 1.0)
+
 func _process(delta: float) -> void:
 	if !Global.PAUSE:
 		proc()
@@ -43,3 +43,7 @@ func proc() -> void:
 
 func _on_exit() -> void:
 	is_running = false
+	for c in get_children():
+		if c is Line2D and c.name != "Trail":
+			c.clear_points()
+			c.set_script(null)
