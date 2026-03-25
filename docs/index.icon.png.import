@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cimo2fsd2avdi"
-path="res://.godot/imported/EM Simulator.icon.png-d8036c962da2acbe0c8fca16b9802299.ctex"
+uid="uid://c1r20y4e7mx15"
+path="res://.godot/imported/index.icon.png-b92c9a802ad4b78e247784454a6b506f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Export/EM Simulator.icon.png"
-dest_files=["res://.godot/imported/EM Simulator.icon.png-d8036c962da2acbe0c8fca16b9802299.ctex"]
+source_file="res://docs/index.icon.png"
+dest_files=["res://.godot/imported/index.icon.png-b92c9a802ad4b78e247784454a6b506f.ctex"]
 
 [params]
 
