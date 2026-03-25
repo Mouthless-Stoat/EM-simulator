@@ -1,5 +1,4 @@
 res://packed/particle/particle.tscn
 res://main_theme.tres
-res://main.gd
 res://packed/particle/particle.gd
-res://packed/arrow/arrow.tscn
+res://Main.tscn

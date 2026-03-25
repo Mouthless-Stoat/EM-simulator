@@ -32,7 +32,8 @@ func proc() -> void:
 	acc = (F_e+F_b)/(mass*Global.me)
 	
 	vel += F_e/(mass*Global.me)
-	vel = vel.rotated(F_b.length()/(Global.me * mass * vel.length()) * charge * Global.B_DIR)
+	if vel.length() != 0:
+		vel = vel.rotated(F_b.length()/(Global.me * mass * vel.length()) * charge * Global.B_DIR)
 
 	position += vel
 

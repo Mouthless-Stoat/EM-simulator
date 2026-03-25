@@ -451,6 +451,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 8
 
 [node name="Pause" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer4/HBoxContainer" unique_id=828127460]
+self_modulate = Color(0, 0.84313726, 0.56078434, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
@@ -463,6 +464,7 @@ press = ExtResource("7_trn2v")
 
 [node name="Forward" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer4/HBoxContainer" unique_id=890092082]
 unique_name_in_owner = true
+modulate = Color(0.43137255, 0.7254902, 1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
 icon = ExtResource("7_lgr22")
