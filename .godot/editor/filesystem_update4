@@ -1,6 +1,2 @@
-res://Main.tscn
-res://main_theme.tres
-res://script/launcher.gd
-res://main.gd
-res://packed/particle/particle.gd
 res://packed/particle/particle.tscn
+res://main_theme.tres
