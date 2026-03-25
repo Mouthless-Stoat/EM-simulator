@@ -21,10 +21,12 @@ func _process(delta: float) -> void:
 
 func _on_enable_electric_toggled(toggled_on: bool) -> void:
 	Global.HAVE_E = toggled_on as int
+	%EField.visible = toggled_on
+	
 
 func _on_enable_magnetic_toggled(toggled_on: bool) -> void:
 	Global.HAVE_B = toggled_on as int
-	
+	%BField.visible = toggled_on
 
 func _E_str_changed(value: float) -> void:
 	Global.E_STR = value
@@ -34,7 +36,7 @@ func _B_str_changed(value: float) -> void:
 
 func launch_particle() -> void:
 	var new_particle := particle.instantiate()
-	new_particle.charge = (%Positive.disabled as int) * 2 - 1
+	new_particle.charge = ((%Positive.disabled as int) * 2 - 1) * %Charge.value
 	new_particle.position = %Launcher.position
 	new_particle.init_vel = %InitVel.value * Vector2.RIGHT
 	new_particle.mass = %Mass.value
@@ -49,3 +51,22 @@ func clear_particle() -> void:
 	for child in %SubViewport.get_children():
 		if "Particle" in child.name:
 			child.queue_free()
+
+
+func _change_B_direction() -> void:
+	if %BDir.text == "Into Page":
+		%BDir.text = "Out of Page"
+		%BField.texture = load("res://asset/out-page.png")
+		Global.B_DIR = 1
+	else:
+		%BDir.text = "Into Page"
+		%BField.texture = load("res://asset/into-page.png")
+		Global.B_DIR = -1
+
+
+func _change_E_direction(index: int) -> void:
+	Global.E_DIR = [Vector2.UP, Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT][index]
+	var image: Image = load("res://asset/arrow.png").get_image()
+	for i in range(index):
+		image.rotate_90(CLOCKWISE)
+	%EField.texture = ImageTexture.create_from_image(image)

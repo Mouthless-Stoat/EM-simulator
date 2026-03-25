@@ -7,7 +7,7 @@ func _ready() -> void:
 	friend.connect("value_changed", _on_friend_change)
 	friend.min_value = min_value
 	friend.max_value = max_value
-	friend.step = 0.1
+	friend.step = step
 	friend.value = value
 
 func _on_value_changed(value: float) -> void:

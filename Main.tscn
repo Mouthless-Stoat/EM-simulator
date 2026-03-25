@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cfflcj74id41t" path="res://asset/pause-solid.svg" id="7_trn2v"]
 [ext_resource type="Texture2D" uid="uid://ov2plhxtk2lk" path="res://asset/crosshairs-solid.svg" id="8_03owx"]
 [ext_resource type="Script" uid="uid://u706vbwkahrn" path="res://script/launcher.gd" id="9_03owx"]
+[ext_resource type="Texture2D" uid="uid://dck3k5xcn5ni1" path="res://asset/out-page.png" id="10_wkp8b"]
+[ext_resource type="Texture2D" uid="uid://bc3hbx8hg274g" path="res://asset/arrow.png" id="11_20pc6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ig7tw"]
 bg_color = Color(1, 0.41960785, 0.41960785, 1)
@@ -189,13 +191,42 @@ theme_override_colors/font_color = Color(0.43137255, 0.7254902, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Field Mode"
 
-[node name="EnableElectric" type="CheckButton" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=103349293]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=2100996489]
 layout_mode = 2
+
+[node name="EnableElectric" type="CheckButton" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=103349293]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Electric Field"
 
-[node name="EnableMagnetic" type="CheckButton" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=963442304]
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2" unique_id=1030021319]
 layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+selected = 0
+item_count = 4
+popup/item_0/text = "Up"
+popup/item_0/id = 0
+popup/item_1/text = "Right"
+popup/item_1/id = 1
+popup/item_2/text = "Down"
+popup/item_2/id = 2
+popup/item_3/text = "Left"
+popup/item_3/id = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer" unique_id=463960344]
+layout_mode = 2
+
+[node name="EnableMagnetic" type="CheckButton" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=963442304]
+layout_mode = 2
+size_flags_horizontal = 3
 text = "Magnetic Field"
+
+[node name="BDir" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1130938694]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Out of Page"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=456880434]
 layout_mode = 2
@@ -261,6 +292,29 @@ friend = NodePath("../LineEdit")
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 max_value = 10.0
+alignment = 2
+
+[node name="Label4" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2" unique_id=1653712961]
+layout_mode = 2
+text = "Charge (relative)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2" unique_id=1876227470]
+layout_mode = 2
+
+[node name="Charge" type="HSlider" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=905070433 node_paths=PackedStringArray("friend")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 2.0
+step = 0.1
+value = 1.0
+script = ExtResource("3_fos0i")
+friend = NodePath("../SpinBox")
+
+[node name="SpinBox" type="SpinBox" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2/HBoxContainer" unique_id=327033094]
+layout_mode = 2
 alignment = 2
 
 [node name="Label3" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer2" unique_id=1963108816]
@@ -437,6 +491,29 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
+[node name="BField" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel/MarginContainer" unique_id=1199637219]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(0.27450982, 0.65882355, 0.99215686, 0.11764706)
+layout_mode = 2
+texture = ExtResource("10_wkp8b")
+stretch_mode = 1
+
+[node name="HBoxContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel/MarginContainer" unique_id=1507260757]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/margin_left = -64
+theme_override_constants/margin_top = -64
+
+[node name="EField" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel/MarginContainer/HBoxContainer" unique_id=299852689]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color(0.9098039, 0.3254902, 0.40392157, 0.11764706)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("11_20pc6")
+stretch_mode = 1
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel/MarginContainer" unique_id=1015455203]
 unique_name_in_owner = true
 layout_mode = 2
@@ -447,15 +524,15 @@ stretch = true
 
 [node name="SubViewport" type="SubViewport" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel/MarginContainer/SubViewportContainer" unique_id=100394856]
 unique_name_in_owner = true
+transparent_bg = true
 handle_input_locally = false
 size = Vector2i(902, 668)
-size_2d_override = Vector2i(960, 540)
 render_target_update_mode = 4
 
 [node name="Launcher" type="Sprite2D" parent="MarginContainer/HBoxContainer/VBoxContainer2/Panel/MarginContainer/SubViewportContainer/SubViewport" unique_id=1020782445]
 unique_name_in_owner = true
 modulate = Color(0, 0.84313726, 0.56078434, 1)
-position = Vector2(453.99997, 323)
+position = Vector2(452.99997, 379.00003)
 scale = Vector2(0.3125, 0.3125)
 texture = ExtResource("8_03owx")
 script = ExtResource("9_03owx")
@@ -578,8 +655,10 @@ theme_override_font_sizes/font_size = 24
 text = "- N"
 horizontal_alignment = 1
 
-[connection signal="toggled" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/EnableElectric" to="." method="_on_enable_electric_toggled"]
-[connection signal="toggled" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/EnableMagnetic" to="." method="_on_enable_magnetic_toggled"]
+[connection signal="toggled" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/EnableElectric" to="." method="_on_enable_electric_toggled"]
+[connection signal="item_selected" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer2/OptionButton" to="." method="_change_E_direction"]
+[connection signal="toggled" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/EnableMagnetic" to="." method="_on_enable_magnetic_toggled"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer/HBoxContainer/BDir" to="." method="_change_B_direction"]
 [connection signal="value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer3/EStr/HSlider" to="." method="_E_str_changed"]
 [connection signal="value_changed" from="MarginContainer/HBoxContainer/VBoxContainer/VBoxContainer3/BStr/HSlider" to="." method="_B_str_changed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/Launch" to="." method="launch_particle"]
